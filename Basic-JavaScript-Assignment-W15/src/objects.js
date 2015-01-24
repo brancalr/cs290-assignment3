@@ -47,10 +47,10 @@ function returnObjectLiteral() {
 function MessageLog(user)
 {
   this.user = user;
-  this.sentLog = [];
-  this.recLog = [];
-  this.totSent = 0;
-  this.totRec = 0;
+  var sentLog = [];
+  var recLog = this.recLog = []; //reference:http://stackoverflow.com/questions/13418669/javascript-do-i-need-to-put-this-var-for-every-variable-in-an-object
+  var totSent = 0;
+  var totRec = 0;
   this.logMessage = function(messageText, direction) {
     if (direction == 0 )
 	{
@@ -95,7 +95,7 @@ function MessageLog(user)
 */
 //your code here
 MessageLog.prototype.lastReceivedMessage = function() {
-  return recLog[0];
+  return this.recLog[0];
 };
 
 //end your code
@@ -107,6 +107,8 @@ MessageLog.prototype.lastReceivedMessage = function() {
 */
 
 //your code here
-var person = new MessageLog('BlackHatGuy');
-var myLog = person.logMessage("foo", 1);
+var myLog = new MessageLog('BlackHatGuy');
+myLog.logMessage("foo", 1);
+myLog.logMessage("bar", 1);
+myLog.logMessage("baz", 1);
 //end your code

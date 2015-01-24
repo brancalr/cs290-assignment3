@@ -31,10 +31,10 @@ false otherwise
 */
 function isString(b) {
   //your code here
-  if ( isNaN(b) )
-    return true;
-  else if (b != typeof 'string')
+  if ( typeof b != 'string' )
     return false;
+  else
+    return true;
   //end your code
 }
 
