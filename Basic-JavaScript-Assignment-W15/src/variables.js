@@ -33,7 +33,7 @@ function isString(b) {
   //your code here
   if ( isNaN(b) )
     return true;
-  else
+  else if (b != typeof 'string')
     return false;
   //end your code
 }

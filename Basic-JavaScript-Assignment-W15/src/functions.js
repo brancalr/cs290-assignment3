@@ -41,14 +41,14 @@ var bar = function(doubleArray)
   {
 	if (!isNaN(doubleArray[i]))
 	{
-		doubleArray[i] * 2.0;
-		return doubleArray;
+		doubleArray[i] *= 2.0;
 	}
     else
 	{
 		return false;
 	}
   }
+  return doubleArray;
 };
 //end your code
 
@@ -91,7 +91,7 @@ function parseGit(logArray)
   var i = 0;
   for (; i < logArray.length; i++)
   {
-	gitArray[i] = new GitLog(logArray[i].substring(0, 7), logArray[i].substring(8, 38), logArray[i].substring(40, logArray[i].length - 1));
+	gitArray[i] = new GitLog(logArray[i].substring(0, 7), new Date(logArray[i].substring(8, 38)), logArray[i].substring(40, logArray[i].length - 1));
   }
   return gitArray;
 }

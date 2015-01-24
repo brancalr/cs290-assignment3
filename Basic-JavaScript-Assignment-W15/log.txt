@@ -1,5 +1,9 @@
 You log goes in this  file.
 
 Start: Thu, 22 Jan 2015 22:00:00 -0500
-End: Thu, 22 Jan 2015 22:56:28 -0500
-Tasks: 'initial'
+Tasks: 'initialized repository'
+End: Fri Jan 23 02:41:58 2015 -0500
+Tasks: 'updated source files.'
+
+Start: Sat Jan 24 00:33:03 2015 -0500
+Tasks: updated source files
