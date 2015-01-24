@@ -10,7 +10,13 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  var snack = { 
+    type: 'Goldfish', 
+	brand: 'Pepperidge Farm', 
+	flavor: 'Cheddar', 
+	count: 2000
+  };
+  return snack; //Modify ONLY this line
   //end your code
 }
 
@@ -38,6 +44,10 @@ function returnObjectLiteral() {
 */
 
 //your code here
+function MessageLog(user)
+{
+  this.user = user;
+};
 
 //end your code
 
@@ -47,6 +57,9 @@ function returnObjectLiteral() {
 * received.
 */
 //your code here
+MessageLog.prototype.lastReceivedMessage = function() {
+  this.lastReceivedMessage;
+};
 
 //end your code
 
@@ -57,5 +70,6 @@ function returnObjectLiteral() {
 */
 
 //your code here
-
+new MessageLog('BlackHatGuy');
+var myLog = MessageLog('BlackHatGuy').logMessage("foo", 1);
 //end your code

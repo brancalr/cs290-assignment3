@@ -15,8 +15,8 @@
 //your code here
 function uselessFunction()
 {
-	return null;
-};
+  return null;
+}
 
 //end your code
 
@@ -36,19 +36,19 @@ var barType = typeof bar;
 //your code here
 var bar = function(doubleArray)
 {
-	var i = 0;
-	for (; i < doubleArray.length; i++)
+  var i = 0;
+  for (; i < doubleArray.length; i++)
+  {
+	if (!isNaN(doubleArray[i]))
 	{
-		if (isNaN(doubleArray[i]))
-		{
-			return false;
-		}
-		else
-		{
-			doubleArray[i] * 2;
-		}
+		doubleArray[i] * 2.0;
 		return doubleArray;
 	}
+    else
+	{
+		return false;
+	}
+  }
 };
 //end your code
 
@@ -63,7 +63,7 @@ function GitLog(hash, date, message) {
     this.hash = hash;
     this.date = date;
     this.message = message;
-}
+};
 
 /**
 * Create a function called parseGit to parse Git commit logs
@@ -85,8 +85,14 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-function parseGit()
+function parseGit(logArray)
 {
-	
-};
+  var gitArray = [];
+  var i = 0;
+  for (; i < logArray.length; i++)
+  {
+	gitArray[i] = new GitLog(logArray[i].substring(0, 7), logArray[i].substring(8, 38), logArray[i].substring(40, logArray[i].length - 1));
+  }
+  return gitArray;
+}
 //end your code
